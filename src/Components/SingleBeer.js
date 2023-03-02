@@ -1,10 +1,17 @@
 import React from 'react'
 
-const SingleBeer = () => {
+const SingleBeer = (props) => {
+    const foundBeer = props.beers.find(beer => beer.name === props.name)
+
+    let foundName
+
+    if (foundBeer) {
+        foundName = foundBeer.name
+    }
 
     return (
         <section>
-            single beer
+            <h2>using find {foundName}</h2>
         </section>
     )
 }
