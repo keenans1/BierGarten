@@ -1,9 +1,16 @@
 import React from "react";
 
-const Favorites = () => {
+const Favorites = (props) => {
+
+    const allFavorites = props.favorites.map(favorite => {
+        return (
+            <div>{favorite}</div>
+        )
+    })
+
     return (
         <div>
-            your favorites
+            {allFavorites}
         </div>
     )
 }
