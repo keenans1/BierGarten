@@ -1,4 +1,5 @@
 import React from "react";
+import '../CSS/Favorites.css';
 
 const Favorites = (props) => {
 
@@ -9,7 +10,7 @@ const Favorites = (props) => {
     })
 
     return (
-        <div>
+        <div className='favorites-container'>
             {allFavorites}
         </div>
     )
