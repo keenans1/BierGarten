@@ -1,0 +1,26 @@
+header {
+    background-color: #59981A;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: xx-large;
+}
+
+/* .link {
+    text-decoration: none;
+    color: 'white';
+} */
+
+
+/* Olive Green
+#3D550C
+
+Lime Green
+#81B622
+
+Yellow Green
+#ECF87F
+
+Green
+#59981A */
