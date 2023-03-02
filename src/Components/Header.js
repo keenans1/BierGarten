@@ -1,12 +1,22 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import '../CSS/Header.css'
 
 const Header = () => {
+    const linkStyle = {
+        textDecoration: "none",
+        color: 'white'
+    }
+
     return (
         <header>
-            <Link to='/'>Home</Link>
-            <Link to='/allbeers'>All Beers</Link>
-            <Link to='/favorites'>Favorites</Link>
+            <div>
+                <NavLink to='/' style={linkStyle}>Home</NavLink>
+            </div>
+            <div>
+                <NavLink to='/allbeers' style={linkStyle}>All Beers</NavLink>
+                <NavLink to='/favorites' style={linkStyle}>Favorites</NavLink>
+            </div>
         </header>
     )
 }
