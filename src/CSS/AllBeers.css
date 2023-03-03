@@ -18,15 +18,17 @@
 section {
     border: solid black 1px;
     height: 50vh;
-    width: 49vw;
+    width: 100 vw;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    /* flex-direction: row;
+    align-items: center; */
 }
 
 img {
-    height: 25vh;
-    width: 5vw;
+    height: 30vh;
+    width: 20vw;
+    /* height: 25vh;
+    width: 5vw; */
 }
 
 .text-container {
