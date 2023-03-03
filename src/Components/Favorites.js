@@ -1,12 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import '../CSS/Favorites.css';
 
 const Favorites = (props) => {
 
+    console.log('favorites', props)
+
     const allFavorites = props.favorites.map(favorite => {
-        return (
-            <div>{favorite}</div>
-        )
+
+        const found = props.beers.find(beer => beer.name === favorite)
+
+        if (found) {
+            return (
+                <section>
+                    <Link to={`/${found.name}`}>{found.name}</Link>
+                </section>
+            )
+        }
+
+
+        // return (
+        //     <div>{favorite}</div>
+        // )
     })
 
     return (
