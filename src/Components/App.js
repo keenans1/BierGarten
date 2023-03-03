@@ -4,7 +4,7 @@ import Header from "./Header";
 import AllBeers from "./AllBeers";
 import Favorites from "./Favorites";
 import SingleBeer from "./SingleBeer";
-//import '../CSS/App.css'
+import '../CSS/App.css'
 
 class App extends Component {
   constructor() {
@@ -41,7 +41,7 @@ class App extends Component {
             <AllBeers beers={this.state.beers} addFavorite={this.addFavorite} />
           </Route>
           <Route exact path="/favorites">
-            <Favorites favorites={this.state.favorites} />
+            <Favorites favorites={this.state.favorites} beers={this.state.beers} />
           </Route>
           <Route path="/:beername" render={({ match }) => <SingleBeer name={match.params.beername} beers={this.state.beers} />} />
         </Switch>
