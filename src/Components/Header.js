@@ -5,16 +5,20 @@ import '../CSS/Header.css'
 const Header = () => {
     const linkStyle = {
         textDecoration: "none",
-        color: 'white'
+        color: 'white',
+        margin: '0% 30% 0% -15%'
     }
 
     return (
         <header>
-            <div>
-                <NavLink to='/' style={linkStyle}>Home</NavLink>
+            <div className="home-container">
+                <NavLink to='/' style={linkStyle}>
+                    <div className="icon-container"></div>
+                    <p>Home</p>
+                </NavLink>
             </div>
-            <div>
-                <NavLink to='/allbeers' style={linkStyle}>All Beers</NavLink>
+            <div className="menu-container">
+                <NavLink to='/allbeers' style={linkStyle}>Beers</NavLink>
                 <NavLink to='/favorites' style={linkStyle}>Favorites</NavLink>
             </div>
         </header>
