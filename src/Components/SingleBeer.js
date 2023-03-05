@@ -1,41 +1,46 @@
 import React, { Component } from 'react';
 import fetchBeerData from '../APIFetchCall';
+import Error from './Error';
 
 class SingleBeer extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            beer: {
-
-            }
+            beer: {},
+            errorMessage: ''
         }
     }
 
     componentDidMount = () => {
         fetchBeerData(this.props.id)
             .then(data => this.setState({ beer: data[0] }))
+            .catch(err => this.setState({ errorMessage: err.message }))
     }
 
     render() {
         if (this.state.beer.name) {
 
             const { name, description, ph, ingredients } = this.state.beer
-            const hopsList = ingredients.hops.map(hop => <li>{hop.name}</li>)
-            const maltList = ingredients.malt.map(malt => <li>{malt.name}</li>)
+            const hopsList = ingredients.hops.map((hop, index) => <li key={index}>{hop.name}</li>)
+            const maltList = ingredients.malt.map((malt, index) => <li key={index}>{malt.name}</li>)
 
             return (
                 <section className='info-container'>
-                    <h2>Description: {name}</h2>
-                    <p>{description}</p>
-                    <p>{ph}</p>
-                    <ul>
-                        hops {hopsList}
-                    </ul>
-                    <ul>
-                        malt {maltList}
-                    </ul>
-                    <p>yeast {ingredients.yeast}</p>
+                    <h2>{name}</h2>
+                    <p>Description: {description}</p>
+                    <p>ph: {ph}</p>
+                    <ul>hops: {hopsList}</ul>
+                    <ul>malt: {maltList}</ul>
+                    <p>yeast: {ingredients.yeast}</p>
                 </section>
+            )
+        } else if (this.state.errorMessage) {
+            return (
+                <div>{this.state.errorMessage}</div>
+            )
+        } else {
+            return (
+                <Error />
             )
         }
     }
