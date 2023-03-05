@@ -16,16 +16,15 @@ const AllBeers = (props) => {
             <section className="single-beer-container" key={index}>
                 <div>
                     <Link to={`/beers/${beer.id}`} className='title'>
-                        <p>{beer.name}</p>
+                        <h2>{beer.name}</h2>
                         <img src={beer['image_url']} alt={beer.name} />
                     </Link>
-                    <p>ABV: {beer.abv}</p>
                 </div>
                 <div className="text-container">
-                    <h2>Food Pairings</h2>
+                    <h3>Food Pairings</h3>
                     <ul>{foods}</ul>
                     <button onClick={() => props.addFavorite(beer.name)}>Add to Favorites</button>
-                    <p>Click the title or image to see more info about {beer.name}</p>
+                    <p className="assert-text">Click the title or image to see more info about {beer.name}</p>
                 </div>
             </section>
         )
