@@ -6,7 +6,7 @@ const Favorites = (props) => {
     const allFavorites = props.favorites.map((favorite, index) => {
         const foundBeer = props.beers.find(beer => beer.name === favorite)
         return (
-            <section key={index}>
+            <section key={index} className='favorite-container'>
                 <img src={foundBeer['image_url']} alt={foundBeer.name} />
                 <div>
                     <Link to={`/beers/${foundBeer.id}`}>{foundBeer.name}</Link>
@@ -17,7 +17,7 @@ const Favorites = (props) => {
     })
 
     return (
-        <div className='favorites-container'>
+        <div>
             <h2>Your Favorites</h2>
             {allFavorites}
         </div>
