@@ -4,7 +4,8 @@ import Header from "./Header";
 import AllBeers from "./AllBeers";
 import Favorites from "./Favorites";
 import SingleBeer from "./SingleBeer";
-import '../CSS/App.css'
+import '../CSS/App.css';
+import fetchBeerData from "../APIFetchCall";
 
 class App extends Component {
   constructor() {
@@ -16,8 +17,7 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    fetch('https://api.punkapi.com/v2/beers')
-      .then(response => response.json())
+    fetchBeerData()
       .then(data => this.setState({ beers: data }))
   }
 
