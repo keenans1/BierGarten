@@ -21,7 +21,7 @@ class SingleBeer extends Component {
     render() {
         if (this.state.beer.name) {
 
-            const { name, description, ph, ingredients } = this.state.beer
+            const { name, description, ph, abv, ibu, attenuation_level, ingredients, brewers_tips } = this.state.beer
             const hopsList = ingredients.hops.map((hop, index) => <li key={index}>{hop.name}</li>)
             const maltList = ingredients.malt.map((malt, index) => <li key={index}>{malt.name}</li>)
 
@@ -29,10 +29,20 @@ class SingleBeer extends Component {
                 <section className='beer-info-container'>
                     <h2>{name}</h2>
                     <p>Description: {description}</p>
-                    <p>ph: {ph}</p>
-                    <ul>hops: {hopsList}</ul>
-                    <ul>malt: {maltList}</ul>
-                    <p>yeast: {ingredients.yeast}</p>
+                    <p>Brewers Tips: {brewers_tips}</p>
+                    <p>Ingredients</p>
+                    <div className='ingredients-container'>
+                        <ul>Hops: {hopsList}</ul>
+                        <ul>Malt: {maltList}</ul>
+                    </div>
+                    <p>Brewer Facts</p>
+                    <div className='brewer-facts-container'>
+                        <p>ph: {ph}</p>
+                        <p>abv: {abv}</p>
+                        <p>ibu: {ibu}</p>
+                        <p>attenuation level: {attenuation_level}</p>
+                        <p>yeast: {ingredients.yeast}</p>
+                    </div>
                 </section>
             )
         } else if (this.state.errorMessage) {
