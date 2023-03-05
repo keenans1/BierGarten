@@ -13,19 +13,19 @@ const Favorites = (props) => {
         if (found) {
             return (
                 <section>
-                    <Link to={`/${found.name}`}>{found.name}</Link>
+                    <img src={found['image_url']} />
+                    <div>
+                        <Link to={`/beers/${found.id}`}>{found.name}</Link>
+                        <p>Click the title to see more info!</p>
+                    </div>
                 </section>
             )
         }
-
-
-        // return (
-        //     <div>{favorite}</div>
-        // )
     })
 
     return (
         <div className='favorites-container'>
+            <h2>Your Favorites</h2>
             {allFavorites}
         </div>
     )
