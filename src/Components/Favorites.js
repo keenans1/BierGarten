@@ -16,9 +16,14 @@ const Favorites = (props) => {
         )
     })
 
+    const titleStyle = {
+        paddingLeft: "5%",
+        fontSize: 'xxx-large'
+    }
+
     return (
         <div>
-            <h2>Your Favorites</h2>
+            <h2 style={titleStyle}>Your Favorites</h2>
             {allFavorites}
         </div>
     )
