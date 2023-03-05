@@ -35,7 +35,11 @@ class App extends Component {
         <Header />
         <Switch>
           <Route exact path="/">
-            <h2>Welcome to our site! Check out our menu!</h2>
+            <section className="info-text-container">
+              <h2>Welcome to the BierGarten!</h2>
+              <h2> For information about all of our beers, click the beers tab in the menu</h2>
+              {/* <h2>If you would like to favorite a beer, simply click the add to favorite button on your desired brew</h2> */}
+            </section>
           </Route>
           <Route exact path="/allbeers">
             <AllBeers beers={this.state.beers} addFavorite={this.addFavorite} />
@@ -43,7 +47,7 @@ class App extends Component {
           <Route exact path="/favorites">
             <Favorites favorites={this.state.favorites} beers={this.state.beers} />
           </Route>
-          <Route path="/:beername" render={({ match }) => <SingleBeer name={match.params.beername} beers={this.state.beers} />} />
+          <Route path="/beers/:beerid" render={({ match }) => <SingleBeer id={match.params.beerid} />} />
         </Switch>
       </main>
     )
