@@ -3,24 +3,17 @@ import { Link } from "react-router-dom";
 import '../CSS/Favorites.css';
 
 const Favorites = (props) => {
-
-    console.log('favorites', props)
-
-    const allFavorites = props.favorites.map(favorite => {
-
-        const found = props.beers.find(beer => beer.name === favorite)
-
-        if (found) {
-            return (
-                <section>
-                    <img src={found['image_url']} />
-                    <div>
-                        <Link to={`/beers/${found.id}`}>{found.name}</Link>
-                        <p>Click the title to see more info!</p>
-                    </div>
-                </section>
-            )
-        }
+    const allFavorites = props.favorites.map((favorite, index) => {
+        const foundBeer = props.beers.find(beer => beer.name === favorite)
+        return (
+            <section key={index}>
+                <img src={foundBeer['image_url']} alt={foundBeer.name} />
+                <div>
+                    <Link to={`/beers/${foundBeer.id}`}>{foundBeer.name}</Link>
+                    <p>Click the title to see more info!</p>
+                </div>
+            </section>
+        )
     })
 
     return (
