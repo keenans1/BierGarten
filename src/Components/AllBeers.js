@@ -13,7 +13,7 @@ const AllBeers = (props) => {
         })
 
         return (
-            <section key={index}>
+            <section className="single-beer-container" key={index}>
                 <div>
                     <Link to={`/beers/${beer.id}`} className='title'>
                         <p>{beer.name}</p>
