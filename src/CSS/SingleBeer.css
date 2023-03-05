@@ -2,3 +2,11 @@
     display: flex;
     flex-direction: column;
 }
+
+.ingredients-container {
+    display: flex;
+}
+
+.brewer-facts-container {
+    display: flex;
+}
