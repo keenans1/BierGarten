@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import fetchBeerData from '../APIFetchCall';
 
 class SingleBeer extends Component {
     constructor(props) {
@@ -11,8 +12,7 @@ class SingleBeer extends Component {
     }
 
     componentDidMount = () => {
-        fetch(`https://api.punkapi.com/v2/beers/${this.props.id}`)
-            .then(response => response.json())
+        fetchBeerData(this.props.id)
             .then(data => this.setState({ beer: data[0] }))
     }
 
