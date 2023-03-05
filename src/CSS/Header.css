@@ -1,10 +1,27 @@
 header {
     background-color: #59981A;
-    height: 15vh;
+    height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: xx-large;
+    font-size: large;
+}
+
+.icon-container {
+    background-image: url('../toast.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 5vh;
+    width: 5vw;
+    margin: 0;
+}
+
+.home-container {
+    margin-left: 5%;
+}
+
+.menu-container {
+    margin: 5%;
 }
 
 /* .link {
