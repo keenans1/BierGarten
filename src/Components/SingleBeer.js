@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import fetchBeerData from '../APIFetchCall';
 import Error from './Error';
+import '../CSS/SingleBeer.css';
 
 class SingleBeer extends Component {
     constructor(props) {
@@ -25,7 +26,7 @@ class SingleBeer extends Component {
             const maltList = ingredients.malt.map((malt, index) => <li key={index}>{malt.name}</li>)
 
             return (
-                <section className='info-container'>
+                <section className='beer-info-container'>
                     <h2>{name}</h2>
                     <p>Description: {description}</p>
                     <p>ph: {ph}</p>
