@@ -4,11 +4,3 @@ main {
     background-size: cover;
     height: 100vh;
 }
-
-.info-text-container {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    justify-content: flex-start;
-    align-items: center;
-}
