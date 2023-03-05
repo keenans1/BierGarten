@@ -19,7 +19,7 @@
     align-items: flex-start;
 }
 
-section {
+.single-beer-container {
     /* border: solid black 1px; */
     border-bottom: solid black 1px;
     height: 55vh;
