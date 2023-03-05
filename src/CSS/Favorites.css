@@ -2,4 +2,5 @@
     background-color: #3D550C;
     height: 40vh;
     padding-top: 10%;
+    display: flex;
 }
