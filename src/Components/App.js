@@ -37,17 +37,8 @@ class App extends Component {
         <Header />
         <Switch>
           <Route exact path="/" render={() => <Home />} />
-          {/* <Route exact path="/allbeers">
-            <AllBeers beers={this.state.beers} addFavorite={this.addFavorite} />
-          </Route> */}
           <Route exact path="/allbeers" render={() => <AllBeers beers={this.state.beers} addFavorite={this.addFavorite} />} />
-
-          {/* <Route exact path="/favorites">
-            <Favorites favorites={this.state.favorites} beers={this.state.beers} />
-          </Route> */}
-
           <Route exact path="/favorites" render={() => <Favorites favorites={this.state.favorites} beers={this.state.beers} />} />
-
           <Route path="/beers/:beerid" render={({ match }) => <SingleBeer id={match.params.beerid} />} />
           <Route path="/:error" render={() => <Error />} />
         </Switch>
