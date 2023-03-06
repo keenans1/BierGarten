@@ -34,7 +34,7 @@ The purpose of this website is to appeal to two niche audiences. The first being
 [BierGarten](linkhere)
 
 ## GIF
-![BierGarten](gifhere)
+![BierGarten](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTc3ODhkN2JmZDRlZGQ2YjdlYzU5YWJjNDIxZGJlOGJjNzk2M2VlMSZjdD1n/23zYz8xQYF9eHnKorU/giphy.gif)
 
 ## Contributors
 * [Keenan Southall](https://github.com/keenans1)
