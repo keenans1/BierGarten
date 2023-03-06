@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import fetchBeerData from '../APIFetchCall';
 import Error from './Error';
 import '../CSS/SingleBeer.css';
+import PropTypes from 'prop-types';
 
 class SingleBeer extends Component {
     constructor(props) {
@@ -58,3 +59,7 @@ class SingleBeer extends Component {
 }
 
 export default SingleBeer
+
+SingleBeer.propTypes = {
+    id: PropTypes.string
+}
