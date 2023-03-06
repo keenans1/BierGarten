@@ -5,8 +5,6 @@ import PropTypes from 'prop-types';
 
 const AllBeers = (props) => {
 
-    console.log('all beers', props)
-
     const beers = props.beers.map((beer, index) => {
 
         const foods = beer['food_pairing'].map((food, index) => {
