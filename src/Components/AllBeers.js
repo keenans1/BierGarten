@@ -22,6 +22,7 @@ const AllBeers = (props) => {
                     </Link>
                 </div>
                 <div className="text-container">
+                    <h3>{beer['tagline']}</h3>
                     <h3>Food Pairings</h3>
                     <ul>{foods}</ul>
                     <button onClick={() => props.addFavorite(beer.name)}>Add to Favorites</button>
