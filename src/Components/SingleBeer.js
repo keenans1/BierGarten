@@ -28,7 +28,7 @@ class SingleBeer extends Component {
             return (
                 <section className='beer-info-container'>
                     <h2>{name}</h2>
-                    <p>Description: {description}</p>
+                    <p id='description'>Description: {description}</p>
                     <p>Brewers Tips: {brewers_tips}</p>
                     <p>Ingredients</p>
                     <div className='ingredients-container'>
